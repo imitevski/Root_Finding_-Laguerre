@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 def Lagg(f, x0, n, k, tol):
     '''
-    :param f: function we want to find the roots with variable z (it can be used for complex & real functions)
-    :param x_k: the iniitla guess
+    :param f: function you want to find the roots with variable z (it can be used for complex & real functions)
+    :param x_k: the iniitial guess
     :param n: order of polynomial ( e.g. n=1 for p(z) = z**2 -1 )
     :param k: up to what iteration are we finding x, x_k
     :return: x_k_1, i where "x_k_1" is the root and "i" is the number of iterations it took
