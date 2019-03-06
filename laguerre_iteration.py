@@ -35,26 +35,3 @@ def Lagg(f, x0, n, k, tol):
         print(x_k,s)
 
     return x_k, i
-
-#sample code testing the function
-x0_array = np.linspace(-100,100,30)
-store = np.zeros((len(x0_array),3)) # 1st column for x_k, 2nd for # of iter., 3rd for x0
-
-for i,x0_s in enumerate(x0_array):
-    store[i,0] = Lagg(f = lambda z: z**2 - 1,x0 = x0_s,n=2,k=10,tol=10**(-5))[0]
-    store[i,1] = Lagg(f = lambda z: z**2 - 1,x0 = x0_s,n=2,k=10,tol=10**(-5))[1]
-    store[i,2] = x0_s
-
-fig = plt.figure(1)
-axes = fig.add_subplot(1, 1, 1)
-axes.plot(store[:,2], store[:,0], 'x')
-#axes.set_title('Initial Value Selection Versus Root Obtained')
-axes.set_xlabel("$x_0$")
-axes.set_ylabel("$Root$")
-
-fig = plt.figure(2)
-axes = fig.add_subplot(1, 1, 1)
-axes.plot(store[:,2], store[:,1], 'x')
-#axes.set_title('Initial Value Selection Versus Number of Iterations to convergence')
-axes.set_xlabel("$x_0$")
-axes.set_ylabel("Number of Iterations")

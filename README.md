@@ -1,4 +1,2 @@
-# laguerre_iteration
-Root-finding algorithm with cubic convergence
-
-$\tau = 13$
+# Laguerre Iteration
+Root-finding algorithm with cubic convergence. See the Jupyter Notebook for more info about the code and sample run and the .py file contains the function. 
